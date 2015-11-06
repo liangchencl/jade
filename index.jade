@@ -1,0 +1,17 @@
+doctype html
+html
+   head
+      meta(charset="utf-8")
+      title 重庆新PC站
+      meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no")
+      link(rel='styleSheet', href='css/bootstrap.min.css')
+      link(rel='styleSheet', href='css/style.css')
+      script(src='js/jquery-2.1.4.min.js')
+   body
+      include public/header
+      section.notice
+         .container
+            p.font-color-white.pull-left 本月特惠: #{messages.notice}
+            .public-button.pull-right
+               a(href='#', target='_blank') 马上参加
+      include public/footer

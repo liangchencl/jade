@@ -1,0 +1,169 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0
+}
+
+body, button, input, select, textarea {
+    font: 13px "\5fae\8f6f\96c5\9ed1", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
+    color: #535353;
+}
+address, cite, dfn, em, var {
+    font-style: normal
+}
+a {
+    color: #666;
+    text-decoration: none
+}
+a:hover {
+    color: #bb9c63;
+    text-decoration: none;
+}
+ul, ol, li {
+    list-style-type: none;
+}
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+/*自定义字体颜色*/
+.font-color-yellow {
+    color: #c59650;
+}
+.font-color-black {
+    color: #1f1f1f;
+}
+.font-color-grey {
+    color: #666;
+}
+.font-color-white {
+    color: #fff;
+}
+
+/*自定义按钮*/
+.public-button {
+    width: 98px;
+    height: 32px;
+    line-height: 30px;
+    text-align: center;
+    border:1px solid #444;
+}
+.public-button a {
+    display: block;
+    width: inherit;
+    height: inherit;
+    font-size: 16px;
+    color: #444;
+}
+.header,.header-area,.header-title,.header ul, .footer {
+    display: table;
+}
+.header ul, .header li,.header-area span, .header-title .logo, .footer li {
+    float: left;
+}
+.header, .footer, .notice {
+    width: 100%;
+}
+.header, .footer {
+    padding: 15px 25px;
+}
+.header-left, .notice p {
+    width: 995px;
+}
+.header-right {
+    width: 235px;
+}
+.header-area em, .footer em {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.header, .notice p, .footer {
+    overflow: hidden;
+}
+.header-area li:last-child em, .footer li:last-child em {
+    display: none;
+}
+/*header*/
+.header {
+    height: 95px;
+    background: black;
+}
+.header-area span, .header-area a, .header-area em {
+    color: #aaa;
+}
+.header-area ul {
+    padding-left: 5px;
+}
+.header-title {
+    margin-top: 20px;
+}
+.header-title ul {
+    position: relative;
+    margin-left: 30px;
+    margin-top: -3px; 
+}
+.header-title li {
+    margin-left: 25px;
+    font-size: 18px;
+}
+.header-title li.active a{
+	color: #bb9c63;
+}
+.header-title li:first-child {
+	margin-left: 0;
+}
+.header-title span {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    display: block;
+    width: 72px;
+    height: 2px;
+    background: #bb9c63;
+}
+.number p, .notice p {
+	font-size: 18px;
+}
+/*notice*/
+.notice {
+    height: 50px;
+    line-height: 50px;
+    background: red;
+}
+.notice .public-button {
+    margin-top: 9px;
+    background: #1f1f1f;
+    border: none;
+}
+.notice .public-button a {
+    color: white;
+}
+/*footer*/
+.footer {
+    height: 75px;
+}
+.footer ul {
+    margin-top: 5px;
+}
+.footer ul, .footer p {
+    font-size: 12px;
+}
+.footer p:last-child {
+    margin-top: 10px;
+}
+
+
+
+
+
+/* =============caselist.jade============= */
+.position-r {position: relative;}
+.position-a {position: absolute;}
+#caselist {background:#efefed;padding-bottom: 60px;}
+#caselist h2 {border-bottom: 1px solid #ccc;padding-bottom:15px;margin-top: 35px;}
+#caselist .row {border-bottom: 1px solid #ccc;margin-top: 20px;}
+#caselist h4 {margin-top: 20px;font-size: 20px;}
+#caselist p {margin-top: 10px;line-height: 1.6em;}
+#caselist .public-button {background: #333333;margin: 20px 20px 0 0;width: 115px;}
+#caselist .public-button a {color: #fff;}
+#caselist .case-bef {left: 22px;bottom: 0px;padding: 10px;background: #000;color: #fff;}
+#caselist .case-aft {left: 0px;bottom: 0px;padding: 10px;background: #000;color: #fff;}

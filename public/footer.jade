@@ -1,0 +1,14 @@
+- var footer_message = {'title':['关于我们', '来院路线', '在线咨询', '在线预约'], 'details':{'copyright': '©2004-2012 版权所有 任何单位及个人未经许可 不得擅自转载使用', 'name':'深圳鹏爱医疗美容医院', 'record':'粤ICP备09031743号-1', 'telephone':'0755-26650533'}}
+footer.footer
+   .footer-left.pull-left
+      .logo
+         a(href='#', target='_self')
+            img(src='images/logo.png', alt='鹏爱重庆')
+      ul
+         each Title, i in footer_message.title
+            li
+               a(href='#', target='_blank') #{Title}
+               em |
+   .footer-right.pull-right
+      p.text-right #{footer_message.details.copyright}
+      p.text-right #{footer_message.details.name} #{footer_message.details.record} #{footer_message.details.telephone}

@@ -1,0 +1,25 @@
+- var header_message = {'area': ['首尔', '上海', '广州', '深圳', '天津', '杭州', '成都', '重庆', '长沙', '昆明', '福州'], 'title': ['鹏爱首页', '美丽咨询', '塑美团队', '塑美案例', '本月活动', '安全体系', '整容项目'], 'number':'0755-2665 0533'}
+- var messages = {'notice':'晶彩假体隆鼻3980元，晶彩假体隆鼻3980元，晶彩假体隆鼻3980元，晶彩假体隆鼻3980元'}
+header.header
+   .header-left.pull-left
+      .header-area
+         span 鹏爱连锁:
+         ul
+            each Area, i in header_message.area
+               li
+                  a(href='#', target='_blank') #{Area}
+                  em |
+      .header-title
+         .logo
+            a(href='#', target='_self')
+               img(src='images/logo.png', alt='鹏爱重庆')
+         ul
+            each Title, i in header_message.title
+               li(class={active: i === 0})
+                  a.font-color-white(href='#', target='_blank') #{Title}
+            span
+   .header-right.pull-right
+      .years18
+         img(src='images/18year.png', alt='安全塑美18年')
+      .number
+         p.font-color-yellow 美丽热线: #{header_message.number}

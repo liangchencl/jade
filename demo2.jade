@@ -1,0 +1,39 @@
+doctype
+html
+	head
+		meta(charset="utf-8")
+		title 标题
+	body
+		- var sections =[{id:1,items:["a","b","c"]},{id:2,items:["d","e","f"]},{id:3,items:["g","h","i"]}]
+		dl
+			each sec in sections
+				dt= sec.id
+				each item in sec.items
+					dd= item
+		- var n = 0
+			ul
+				while n < 4
+					li= n++
+		h2 case案例
+		-var name = 'jade'
+		case name
+			when "html5"
+				p hi html5
+			when "java"
+				p hi java
+			default
+				p hi #{name}
+
+
+		h2 mixin
+		mixin lession
+			p 测试mixin
+		+lession
+
+		mixin lession01(name,kechen)
+			p #{name}
+			ul
+				li.ke
+					each kec in kechen
+						li= kec
+		+lession01(['tom'],["jade","js","css","html5"])

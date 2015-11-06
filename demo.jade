@@ -1,0 +1,30 @@
+doctype
+html
+   head
+      meta(charset="utf-8")
+      title 标题
+      link(rel="styleSheet",href="css/style.css")
+      script(src="js/jquery-2.1.4.min.js")
+   body
+      h2 转义
+      - var data = "text"
+      -  var htmldata   =  "<script>alert(1)</script><span>script</span>"
+      p #{data}
+      p 这句转义了，不会执行里面的js，虽然页面上显示的没什么不同，但是代码里面都转义了
+      p #{htmldata}
+      p 这句话会执行里面的js
+      p !{htmldata}
+      script.
+         $(function(){
+         alert(1)
+         })
+      p= data
+      p= htmldata
+      p!= htmldata
+      p \#{data}
+      p \!{data}
+      input(value=data)
+      input(value="#{data}")
+      p newdata 是没有定义的，如果按照下面的那样写就会出现undefined，所以要去掉\#{和}
+      input(value="#{newdata}")
+      input(value=newdata)

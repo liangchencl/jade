@@ -1,0 +1,36 @@
+doctype
+html
+	head
+		meta(charset="utf-8")
+		title 标题
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no")
+		link(rel='styleSheet', href='css/bootstrap.min.css')
+		link(rel='styleSheet', href='css/style.css')
+		script(src='js/jquery-2.1.4.min.js')
+		style.
+			.expert-desc {width:50%;left:30px;top:100px;}
+			.expert-desc ul li {margin-right:20px;line-height:2em;}
+	body
+	include public/header
+	-
+		var expert = [
+				{"expname":"周鹏武","expimg":"expert-1.png","description":"周鹏武职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔","shanchang":["①周鹏武①周鹏武","①周鹏武①周鹏武","①周鹏武①周鹏武","①周鹏武①周鹏武","①周鹏武①周鹏武","①周鹏武①周鹏武","①周鹏武①周鹏武","①周鹏武①周鹏武","①周鹏武①周鹏武","①周鹏武①周鹏武"]},
+				{"expname":"柏雨青","expimg":"expert-1.png","description":"柏雨青职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔","shanchang":["①柏雨青xxxxxxxxxx","①柏雨青xxxxxxxxxx","①柏雨青xxxxxxxxxx","①柏雨青xxxxxxxxxx","①柏雨青xxxxxxxxxx","①柏雨青xxxxxxxxxx","①柏雨青xxxxxxxxxx","①柏雨青xxxxxxxxxx","①柏雨青xxxxxxxxxx","①柏雨青xxxxxxxxxx"]},
+				{"expname":"丁文婷","expimg":"expert-1.png","description":"丁文婷职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔","shanchang":["①丁文婷xxxxxxxxxx","①丁文婷xxxxxxxxxx","①丁文婷xxxxxxxxxx","①丁文婷xxxxxxxxxx","①丁文婷xxxxxxxxxx","①丁文婷xxxxxxxxxx","①丁文婷xxxxxxxxxx","①丁文婷xxxxxxxxxx","①丁文婷xxxxxxxxxx","①丁文婷xxxxxxxxxx"]},
+				{"expname":"徐小珂","expimg":"expert-1.png","description":"徐小珂职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔职称头衔","shanchang":["①徐小珂xxxxxxxxxx","①徐小珂xxxxxxxxxx","①徐小珂xxxxxxxxxx","①徐小珂xxxxxxxxxx","①徐小珂xxxxxxxxxx","①徐小珂xxxxxxxxxx","①徐小珂xxxxxxxxxx","①徐小珂xxxxxxxxxx","①徐小珂xxxxxxxxxx","①徐小珂xxxxxxxxxx"]},
+			]
+	section#expert
+		.container
+			.row
+				each expert1 in expert
+					.col-md-6.text-right
+						.margin-box.position-r
+							img(src="images/#{expert1.expimg}")
+							.expert-desc.position-a.text-left
+								h2 #{expert1.expname}
+								p.
+									#{expert1.description}
+								p 擅长项目：
+								ul
+									each s in expert1.shanchang
+										li.pull-left= s
